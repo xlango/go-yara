@@ -2,9 +2,9 @@
 
 # go-yara
 
-[![GoDoc](https://godoc.org/github.com/hillu/go-yara?status.svg)](https://godoc.org/github.com/hillu/go-yara)
+[![GoDoc](https://godoc.org/github.com/xlango/go-yara?status.svg)](https://godoc.org/github.com/xlango/go-yara)
 [![Travis](https://travis-ci.org/hillu/go-yara.svg?branch=master)](https://travis-ci.org/hillu/go-yara)
-[![Go Report Card](https://goreportcard.com/badge/github.com/hillu/go-yara)](https://goreportcard.com/report/github.com/hillu/go-yara)
+[![Go Report Card](https://goreportcard.com/badge/github.com/xlango/go-yara)](https://goreportcard.com/report/github.com/xlango/go-yara)
 
 Go bindings for [YARA](https://virustotal.github.io/yara/), staying as
 close as sensible to the library's C-API while taking inspiration from
@@ -18,8 +18,8 @@ On a Unix system with _libyara_ 3.11, corresponding header files, and
 _pkg-config_ installed, the following should simply work:
 
 ```
-go get github.com/hillu/go-yara
-go install github.com/hillu/go-yara
+go get github.com/xlango/go-yara
+go install github.com/xlango/go-yara
 ```
 
 The _pkg-config_ program should be able to output the correct compiler
@@ -72,7 +72,7 @@ $ cd ${YARA_SRC} \
 $ GOOS=windows GOARCH=amd64 CGO_ENABLED=1 \
   CC=i686-w64-mingw32-gcc \
   PKG_CONFIG_PATH=${YARA_SRC}/i686-w64-mingw32/lib/pkgconfig \
-  go inxstall -ldflags '-extldflags "-static"' github.com/hillu/go-yara
+  go inxstall -ldflags '-extldflags "-static"' github.com/xlango/go-yara
 ```
 
 Build _libyara_ and _go-yara_ for Win64:
@@ -85,7 +85,7 @@ $ cd ${YARA_SRC} \
 $ GOOS=windows GOARCH=amd64 CGO_ENABLED=1 \
   CC=x86_64-w64-mingw32-gcc \
   PKG_CONFIG_PATH=${YARA_SRC}/x86_64-w64-mingw32/lib/pkgconfig \
-  go install -ldflags '-extldflags "-static"' github.com/hillu/go-yara
+  go install -ldflags '-extldflags "-static"' github.com/xlango/go-yara
 ```
 
 ## YARA 3.x vs. YARA 4.x
@@ -112,7 +112,7 @@ environment variables, e.g.:
 ```
 export CGO_CFLAGS="-I${YARA_SRC}/libyara/include"
 export CGO_LDFLAGS="-L${YARA_SRC}/libyara/.libs -lyara"
-go install -tags no_pkg_config github.com/hillu/go-yara
+go install -tags no_pkg_config github.com/xlango/go-yara
 ```
 
 ## License
