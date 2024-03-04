@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/hillu/go-yara"
+	"github.com/xlango/go-yara"
 )
 
 type Iterator struct {
